@@ -10,6 +10,8 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
 
 interface SuperadminSidebarProps {
   activeTab: string;
@@ -35,9 +37,16 @@ export function SuperadminSidebar({
         <div className="flex items-center gap-2">
           <UtensilsCrossed className="h-8 w-8 text-sidebar-accent" />
           <div>
-            <h1 className="text-xl font-bold text-sidebar-foreground">
-              Wakalni
-            </h1>
+            <Link href="/" className="flex items-center gap-2 select-none">
+              <Image
+                src="/logo.png"
+                alt="EasyDine Logo"
+                width={150}
+                height={80}
+                className="rounded-full"
+                priority
+              />
+            </Link>
             <p className="text-sm text-sidebar-primary-foreground">
               Super Admin
             </p>
@@ -75,7 +84,7 @@ export function SuperadminSidebar({
       {/* Footer */}
       <div className="p-4 border-t border-sidebar-border">
         <div className="text-xs text-sidebar-primary-foreground text-center">
-          © 2024 Wakalni
+          © 2024 EasyDine
         </div>
       </div>
     </div>

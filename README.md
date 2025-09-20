@@ -1,6 +1,6 @@
-# Wakalni
+# EasyDine
 
-Wakalni is a modern restaurant management and food delivery platform built with Next.js, React, and shadcn/ui.  
+EasyDine is a modern restaurant management and food delivery platform built with Next.js, React, and shadcn/ui.  
 It offers a seamless experience for restaurants and users to manage menus, orders, inventory, and payments—all in one place.
 
 ## Features

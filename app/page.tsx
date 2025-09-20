@@ -17,8 +17,9 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
-export default function WakalniLanding() {
+export default function EasyDineLanding() {
   const [scrollY, setScrollY] = useState(0);
   const heroRef = useRef<HTMLDivElement>(null);
 
@@ -44,7 +45,7 @@ export default function WakalniLanding() {
       name: "Ahmed Ben Ali",
       role: "Restaurant Owner",
       content:
-        "Wakalni transformed our restaurant management. Our efficiency increased by 300%!",
+        "EasyDine transformed our restaurant management. Our efficiency increased by 300%!",
       rating: 5,
     },
     {
@@ -90,7 +91,16 @@ export default function WakalniLanding() {
       <nav className="fixed top-0 w-full z-50 glass-effect">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-primary">Wakalni</div>
+            <Link href="/" className="flex items-center gap-2 select-none">
+              <Image
+                src="/logo.png"
+                alt="EasyDine Logo"
+                width={150}
+                height={80}
+                className="rounded-full"
+                priority
+              />
+            </Link>{" "}
             <div className="hidden md:flex space-x-8">
               <a
                 href="#services"
@@ -175,7 +185,7 @@ export default function WakalniLanding() {
           >
             Transform your restaurant operations with our comprehensive
             management platform. Streamline orders, optimize workflows, and grow
-            your business with Wakalni.
+            your business with EasyDine.
           </motion.p>
 
           <motion.div
@@ -249,7 +259,7 @@ export default function WakalniLanding() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-balance">
-              Why Choose Wakalni?
+              Why Choose EasyDine?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
               A comprehensive platform to revolutionize your restaurant
@@ -383,7 +393,7 @@ export default function WakalniLanding() {
               Ready to Transform Your Restaurant?
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Join Wakalni today and revolutionize your restaurant operations
+              Join EasyDine today and revolutionize your restaurant operations
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -401,7 +411,7 @@ export default function WakalniLanding() {
             </div>
 
             <div className="text-muted-foreground">
-              <p>Email: contact@wakalni.tn | Phone: +216 71 123 456</p>
+              <p>Email: contact@EasyDine.tn | Phone: +216 71 123 456</p>
             </div>
           </div>
         </div>
@@ -412,10 +422,10 @@ export default function WakalniLanding() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-2xl font-bold text-primary mb-4 md:mb-0">
-              Wakalni
+              EasyDine
             </div>
             <div className="text-muted-foreground">
-              © 2024 Wakalni. All rights reserved.
+              © 2024 EasyDine. All rights reserved.
             </div>
           </div>
         </div>

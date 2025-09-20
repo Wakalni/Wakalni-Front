@@ -54,10 +54,10 @@ export function Layout({
               <Link href="/" className="flex items-center gap-2 select-none">
                 <Image
                   src="/logo.png"
-                  alt="Wakalni Logo"
-                  width={200}
-                  height={100}
-                  className="rounded-full bg-primary"
+                  alt="EasyDine Logo"
+                  width={150}
+                  height={80}
+                  className="rounded-full"
                   priority
                 />
               </Link>

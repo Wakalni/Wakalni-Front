@@ -69,16 +69,13 @@ export default function AuthPage() {
         {/* Left image */}
         <div className="hidden md:flex flex-col justify-center items-center bg-primary/10 p-8">
           <Image
-            src="/restaurant-hero.jpg"
+            src="/logo.png"
             alt="Connexion"
             width={220}
             height={220}
             className="rounded-xl"
             priority
           />
-          <div className="mt-6 text-center text-primary font-bold text-xl">
-            Bienvenue sur Wakalni
-          </div>
         </div>
         {/* Right forms */}
         <div className="flex-1 p-8 flex flex-col justify-center">

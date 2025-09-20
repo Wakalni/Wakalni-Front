@@ -97,7 +97,7 @@ export default function Homepage() {
       <div className="space-y-6">
         {/* Hero Section */}
         <div className="bg-primary rounded-2xl p-6 text-center text-white">
-          <h2 className="text-2xl font-bold mb-2">Welcome to Wakalni</h2>
+          <h2 className="text-2xl font-bold mb-2">Welcome to EasyDine</h2>
           <p className="text-white/90">
             Discover the best restaurants near you
           </p>
