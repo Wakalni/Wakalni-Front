@@ -1,8 +1,6 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Environment, Float, Sphere } from "@react-three/drei";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -19,46 +17,6 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
-function FloatingFood() {
-  return (
-    <Float speed={2} rotationIntensity={1} floatIntensity={2}>
-      <Sphere args={[0.5, 32, 32]} position={[2, 0, 0]}>
-        <meshStandardMaterial color="#ff6b35" />
-      </Sphere>
-      <Sphere args={[0.3, 32, 32]} position={[-2, 1, 0]}>
-        <meshStandardMaterial color="#f7931e" />
-      </Sphere>
-      <Sphere args={[0.4, 32, 32]} position={[0, -1, 1]}>
-        <meshStandardMaterial color="#6366f1" />
-      </Sphere>
-    </Float>
-  );
-}
-
-function Scene3D({ parallax }: { parallax: number }) {
-  return (
-    <motion.div
-      style={{
-        y: parallax * 0.3,
-        scale: 1 + parallax * 0.0005,
-        filter: "blur(0.5px)",
-      }}
-      className="w-full h-full"
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1 }}
-    >
-      <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
-        <ambientLight intensity={0.5} />
-        <pointLight position={[10, 10, 10]} />
-        <FloatingFood />
-        <Environment preset="city" />
-        <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />
-      </Canvas>
-    </motion.div>
-  );
-}
 
 export default function WakalniLanding() {
   const [scrollY, setScrollY] = useState(0);
@@ -179,17 +137,6 @@ export default function WakalniLanding() {
         ref={heroRef}
         className="relative h-screen flex items-center justify-center overflow-hidden"
       >
-        {/* 3D Parallax */}
-        <motion.div
-          className="absolute inset-0 opacity-20 pointer-events-none"
-          style={{
-            y: parallax * 0.5,
-            scale: 1 + parallax * 0.0005,
-          }}
-        >
-          <Scene3D parallax={parallax} />
-        </motion.div>
-
         {/* Texte Hero Parallax */}
         <motion.div
           className="relative z-10 text-center max-w-4xl mx-auto px-6"

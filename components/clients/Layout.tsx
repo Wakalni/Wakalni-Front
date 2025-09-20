@@ -8,6 +8,7 @@ import { useCart } from "@/hooks/use-cart";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
+import Image from "next/image"; // Ajout import Image
 
 interface LayoutProps {
   children: ReactNode;
@@ -30,7 +31,6 @@ export function Layout({
   const router = useRouter();
   const { theme, setTheme } = useTheme();
 
-  // Remplace cette valeur par la vraie logique de récupération du solde
   const walletBalance = 2500; // DA
 
   return (
@@ -50,20 +50,22 @@ export function Layout({
                 </Button>
               )}
 
-              <div>
-                {title ? (
-                  <h1 className="text-xl font-bold text-foreground">{title}</h1>
-                ) : (
-                  <div>
-                    <h1 className="text-xl font-bold bg-clip-text text-transparent">
-                      Wakalni
-                    </h1>
-                    <p className="text-xs text-muted-foreground">
-                      Fast delivery in Algeria
-                    </p>
-                  </div>
-                )}
-              </div>
+              {/* Logo + Text */}
+              <Link href="/" className="flex items-center gap-2 select-none">
+                <Image
+                  src="/logo.png"
+                  alt="Wakalni Logo"
+                  width={200}
+                  height={100}
+                  className="rounded-full bg-primary"
+                  priority
+                />
+              </Link>
+              {title && (
+                <span className="ml-4 text-xl font-bold text-foreground">
+                  {title}
+                </span>
+              )}
             </div>
 
             <div className="flex items-center space-x-4">

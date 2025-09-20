@@ -43,7 +43,7 @@ export default function CheckoutPage() {
                   <span>Supplements: </span>
                   {item.supplements.map((s) => (
                     <span key={s.id}>
-                      {s.name} (+{s.price.toFixed(2)} DA){" "}
+                      {s.name} (+{s.price} DZD){" "}
                     </span>
                   ))}
                 </div>

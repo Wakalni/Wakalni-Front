@@ -24,13 +24,7 @@ export default function ChatbotWidget() {
   ]);
   const [input, setInput] = useState("");
 
-  const fakeResponses = [
-    "Je comprends, pouvez-vous préciser ?",
-    "Intéressant !",
-    "Je vais réfléchir à ça...",
-    "Bonne question !",
-    "Je ne suis pas sûr, mais je crois que oui.",
-  ];
+  const fakeResponses = ["It's brother.ts located in El-biar"];
 
   const handleSend = () => {
     if (!input.trim()) return;

@@ -65,7 +65,7 @@ export default function AuthPage() {
 
   return (
     <div className="mx-auto max-w-3xl h-screen flex flex-col justify-center items-center px-4">
-      <div className="w-full flex flex-col md:flex-row bg-white rounded-xl shadow-lg overflow-hidden">
+      <div className="w-full flex flex-col md:flex-row rounded-xl shadow-lg overflow-hidden">
         {/* Left image */}
         <div className="hidden md:flex flex-col justify-center items-center bg-primary/10 p-8">
           <Image
@@ -124,20 +124,7 @@ export default function AuthPage() {
                       </p>
                     )}
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="login-type">Type de compte</Label>
-                  <select
-                    id="login-type"
-                    name="type"
-                    className="w-full border rounded px-2 py-1"
-                    value={loginFormik.values.type}
-                    onChange={loginFormik.handleChange}
-                  >
-                    <option value="user">Utilisateur</option>
-                    <option value="resto">Restaurant</option>
-                    <option value="admin">Admin</option>
-                  </select>
-                </div>
+
                 <Button
                   type="submit"
                   className="w-full bg-primary text-white font-semibold mt-4"

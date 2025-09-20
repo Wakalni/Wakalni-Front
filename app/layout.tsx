@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
@@ -28,12 +28,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <html lang="fr">
-            <body>
-              {children}
-              <ChatbotWidget />
-            </body>
-          </html>
+          {children}
+          <ChatbotWidget />
         </ThemeProvider>
       </body>
     </html>
