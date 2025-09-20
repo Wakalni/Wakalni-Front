@@ -1,0 +1,19 @@
+export type IUser = {
+  _id: string;
+  name: string;
+  email: string;
+  password: string;
+  role: "user" | "admin" | "superadmin";
+  createdAt: Date;
+  updatedAt: Date;
+};
+
+export interface IRegister {
+  name: string;
+  email: string;
+  password: string;
+}
+export interface ILogin {
+  email: string;
+  password: string;
+}
